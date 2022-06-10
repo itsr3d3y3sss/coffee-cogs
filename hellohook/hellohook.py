@@ -59,7 +59,9 @@ class Hellohook(commands.Cog):
             greetMessageJson["embeds"] = [e]
         # Send webhook
         try:
-            return await webhook.send(**greetMessageJson)
+            return await webhook.send(**greetMessageJson,
+                username=userObj.display_name,
+                avatar_url=userObj.avatar_url)
         except Exception as e:
             return print(e)
 
