@@ -52,10 +52,10 @@ class Loveplay(commands.Cog):
         else:
             desc = "**{0}** gives **{1}** a {2}".format(ctx.author.mention, text, descriptor)
         botcolor = await ctx.embed_colour()
-        e = discord.Embed(color=botcolor, description=desc)
-        e.set_image(url=imgUrl)
-        e.set_footer(text="Made with Purrbot API\u2002💌")
-        return e
+        embed = discord.Embed(color=botcolor, description=desc)
+        embed.set_image(url=imgUrl)
+        embed.set_footer(text='grief',icon_url="https://cdn.discordapp.com/emojis/886356428116357120.gif?size=96&quality=lossless")
+        return embed
 
 
     # Bot Commands
