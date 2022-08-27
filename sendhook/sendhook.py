@@ -78,7 +78,7 @@ class Sendhook(commands.Cog):
         """Add an alias for a webhook"""
         webhookAlias = await self.config.guild(ctx.guild).webhookAlias()
         webhookAlias[alias] = webhookUrl
-        await self.config.guild(ctx.guild).webhookAlias.set(webhookAlias))
+        await self.config.guild(ctx.guild).webhookAlias.set(webhookAlias)
 
     @aliashook.command(name="remove")
     async def ahremove(self, ctx, alias):
