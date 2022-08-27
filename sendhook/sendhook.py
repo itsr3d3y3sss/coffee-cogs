@@ -224,7 +224,6 @@ class Sendhook(commands.Cog):
                 except Exception as e:
                     await ctx.send("Could not create webhook. Do I have permissions to create webhooks?\n"+str(e)+"\n"+str(wimgdata))
                 else:
-                    await ctx.message.add_reaction("✅")
                     await ctx.send(str(thenewhook.name)+" "+str(thenewhook.url))
 
     
