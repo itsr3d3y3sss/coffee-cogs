@@ -212,7 +212,6 @@ class Sendhook(commands.Cog):
         """Create a webhook"""
         if channel == None:
             channel = ctx.message.channel
-        await ctx.message.add_reaction("⏳")
         await ctx.send(str(channel.mention)+" "+str(channel.id))
         async with aiohttp.ClientSession() as session:
             async with session.get(webhookImage) as resp:
