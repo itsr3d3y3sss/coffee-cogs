@@ -78,12 +78,7 @@ class Sendhook(commands.Cog):
         """Add an alias for a webhook"""
         webhookAlias = await self.config.guild(ctx.guild).webhookAlias()
         webhookAlias[alias] = webhookUrl
-        await self.config.guild(ctx.guild).webhookAlias.set(webhookAlias)
-        # Try adding react, if no perms then send normal message
-        try:
-            await ctx.message.add_reaction("✅")
-        except:
-            await ctx.send("Webhook alias added ✅")
+        await self.config.guild(ctx.guild).webhookAlias.set(webhookAlias))
 
     @aliashook.command(name="remove")
     async def ahremove(self, ctx, alias):
